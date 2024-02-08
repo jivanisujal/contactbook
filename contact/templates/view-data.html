@@ -1,0 +1,52 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <h1>view-data page</h1><br>
+   
+    <table border="1">
+       
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Password</td>
+            <td>Contact</td>
+            <td>Delete</td>
+            <td>Edit</td>
+            <td>Insert</td>
+        </tr>
+        {% for row in con %}
+        <tr>
+            
+            <td>{{row.id}}</td>
+            <td>{{row.name}}</td>
+            <td>{{row.email}}</td>
+            <td>{{row.password}}</td>
+            <td>{{row.contact}}</td> 
+             <td>
+                <a href="/delete-data/{{row.id}}">Delete</a>
+            </td>
+            <td>
+                <a href="/edit-data/{{row.id}}">Edit</a>
+            </td> 
+            <td>
+                <a href="/insert-data/{{row.id}}">Insert</a>
+            </td> 
+
+        </tr>
+        {% endfor%}
+        <tr>
+            <td><a href="logout/">logout</a></td>
+        </tr>
+    </table>
+  
+</div>
+</body>
+</html>

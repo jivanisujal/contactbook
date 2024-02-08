@@ -1,0 +1,49 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+<body>
+  <h1>contact-us page</h1>
+  <form action="" method="post">
+    <table>
+      {%csrf_token%}
+      <tr>
+        <td>Name:</td>
+        <td><input type="text" name="name" id="" value="{{obj.name}}"></td>
+      </tr>
+      <tr>
+        <td>Email:</td>
+        <td>
+          <input type="text" name="email" id="" value="{{obj.email}}">
+        </td>
+      </tr>
+      <tr>
+        <td>Password:</td>
+        <td><input type="text" name="password" id="" value="{{obj.password}}"></td>
+      </tr>
+      <tr>
+        <td>contact:</td>
+        <td><input type="number" name="contact" id="" value="{{obj.contact}}"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><input class="styled-button" type="submit" name="save" value="save" id=""></td>
+      </tr>
+      <h1>{{s}}</h1>
+      <h5>Alredy have Account?? <a href="/login">Log-in</a></h5>
+    </table>
+
+  </form>
+
+
+
+</body>
+
+</html>
